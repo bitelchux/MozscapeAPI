@@ -10,6 +10,7 @@ namespace Scoop
 
     }
 
+    [Serializable]
     public class MozscapeURLMetric
     {
         public string fmrp { get; set; }
