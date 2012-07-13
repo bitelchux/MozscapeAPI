@@ -118,11 +118,7 @@ namespace Scoop
         /// <summary>
         /// Fetches Mozscape API results, returns a string
         /// </summary>
-        /// <param name="strAccessID"></param>
-        /// <param name="strPrivateKey"></param>
-        /// <param name="intExpiryHours"></param>
-        /// <param name="strType"></param>
-        /// <param name="strURL"></param>
+        /// <param name="strAPIURL"></param>
         public string FetchResults(string strAPIURL)
         {
             string strResults = "";
@@ -173,13 +169,9 @@ namespace Scoop
         }
 
         /// <summary>
-        /// Builds the Mozscape API URL
+        /// Parses a mozscape URL metrics API results string and returns a MozscapeURLMetric object
         /// </summary>
-        /// <param name="strAccessID"></param>
-        /// <param name="strPrivateKey"></param>
-        /// <param name="intExpiryHours"></param>
-        /// <param name="strType"></param>
-        /// <param name="strURL"></param>
+        /// <param name="strResults"></param>
         public MozscapeURLMetric ParseURLMetrics(string strResults)
         {
             JavaScriptSerializer jSerializer = new JavaScriptSerializer();
@@ -188,13 +180,9 @@ namespace Scoop
         }
 
         /// <summary>
-        /// Builds the Mozscape API URL
+        /// Parses a mozscape links API results string and returns a list containing MozscapeLinkMetric objects
         /// </summary>
-        /// <param name="strAccessID"></param>
-        /// <param name="strPrivateKey"></param>
-        /// <param name="intExpiryHours"></param>
-        /// <param name="strType"></param>
-        /// <param name="strURL"></param>
+        /// <param name="strResults"></param>
         public List<MozscapeLinkMetric> ParseLinkMetrics(string strResults)
         {
             JavaScriptSerializer jSerializer = new JavaScriptSerializer();
